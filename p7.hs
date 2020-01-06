@@ -24,6 +24,5 @@ primes = 2:sieve [3,5..]
 
     insertprime p xs = PQ.insert (p*p, map (*p) xs)
 
-
 nthPrime :: Int -> Integer
 nthPrime n = last (take n primes)
