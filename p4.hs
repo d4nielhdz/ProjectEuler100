@@ -8,10 +8,6 @@ isPalindrome x = show x == reverse (show x)
 prodIsPalindrome :: Integer -> Integer -> Maybe Integer
 prodIsPalindrome x y = if (isPalindrome (x * y)) then Just (x * y) else Nothing
 
-valIsJust :: Maybe a -> Bool
-valIsJust (Just a) = True
-valIsJust _      = False
-
 takeFirst :: (a -> Bool) -> [a] -> a
 takeFirst f (x:xs)
   | f x == True = x
