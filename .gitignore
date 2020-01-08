@@ -1,2 +1,2 @@
-*.hi
-*.o
+src/*.hi
+src/*.o
