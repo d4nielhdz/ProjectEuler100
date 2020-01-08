@@ -1,3 +1,5 @@
+import Utils
+
 main :: IO ()
 main = do 
   putStrLn . show $ lPN 999
@@ -8,18 +10,9 @@ isPalindrome x = show x == reverse (show x)
 prodIsPalindrome :: Integer -> Integer -> Maybe Integer
 prodIsPalindrome x y = if (isPalindrome (x * y)) then Just (x * y) else Nothing
 
-takeFirst :: (a -> Bool) -> [a] -> a
-takeFirst f (x:xs)
-  | f x == True = x
-  | otherwise   = takeFirst f xs
-
 extract :: Maybe Integer -> Integer
 extract (Just x) = x
 extract Nothing  = 0
-
-ff :: (Functor f) => (a -> b -> f c) -> [a] -> [b] -> [f c]
-ff f xs ys  = fxs <*> ys
-  where fxs = map f xs
 
 fMax :: [Maybe Integer] -> Integer -> Integer
 fMax [] n     = n

@@ -1,4 +1,3 @@
-
 module Utils
 ( ff
 , primes
